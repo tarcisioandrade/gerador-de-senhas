@@ -8,9 +8,11 @@ const indicatorEL = document.querySelector(`[data-js="indicator"]`);
 const copyEL = document.querySelectorAll(`[data-js="copy"]`);
 const copiedEL = document.querySelectorAll(`[data-js="copied"]`);
 
+// Valor Padrão
 let defaultValue = 8;
 valueEL.innerText = defaultValue;
 
+// Muda as cores e texto de acordo com o valor;
 const changeCircles = () => {
   if (defaultValue > 9 && defaultValue <= 14) {
     circlesEL[0].style.backgroundColor = "yellow";
@@ -34,6 +36,7 @@ const changeCircles = () => {
 };
 changeCircles();
 
+// Função que diminui o valor
 const downValueMethod = () => {
   if (defaultValue > 8) {
     defaultValue--;
@@ -42,6 +45,7 @@ const downValueMethod = () => {
   }
 };
 
+// Função que aumenta o valor
 const upValueMethod = () => {
   if (defaultValue < 18) {
     defaultValue++;
@@ -50,10 +54,12 @@ const upValueMethod = () => {
   }
 };
 
+// Carácteres que vao ser usados para gerar a senha
 const hash = Array.from(
   "~!@#$%^&*_+<>1234567890QWERTYUIOPASDFGHJKLZCVBNMqwertyuiopasdfghjklzxcvbnm"
 );
 
+// Função que mistura os caracteres de acordo com o valor
 const generatePassword = () => {
   let password = "";
   for (let i = 0; i < defaultValue; i++) {
@@ -63,6 +69,7 @@ const generatePassword = () => {
   return password;
 };
 
+// Função que inseri a senha no elemento e que manipula o elemento que copia
 const setPasswords = () => {
   passwordEL.forEach((item) => {
     item.parentNode.style.backgroundImage = "none";
@@ -78,11 +85,13 @@ const setPasswords = () => {
   });
 };
 
+// Função que faz aparecer a notificação de "Copiado!" e some depois de 2 segundos
 const handleCopied = (index) => {
   copiedEL[index].classList.add("active");
   setTimeout(() => copiedEL[index].classList.remove("active"), 2000);
 };
 
+// Eventos de click
 buttonEL.addEventListener("click", setPasswords);
 downValueEL.addEventListener("click", downValueMethod);
 upValueEL.addEventListener("click", upValueMethod);
