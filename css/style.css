@@ -1,0 +1,231 @@
+@import "./reset.css";
+
+:root {
+  --font-primary: "Lexend", sans-serif;
+  --blue-dark-body: #071c21;
+  --blue-semi-dark: #153b44;
+  --blue-password: #2d6e7e;
+  --blue-ligth: #01bbe9;
+  --green-password: #00e745;
+  --cinze: #c2c2c2;
+  --white: #e8e8e8;
+  --yellow: #c6de41;
+  --red: #fd2727;
+}
+
+body {
+  background-color: var(--blue-dark-body);
+  padding: 0 1rem;
+}
+
+.box {
+  max-width: 31.5rem;
+  margin: 1rem auto;
+  background-color: var(--blue-semi-dark);
+  font-family: var(--font-primary);
+  padding: 2rem 2rem;
+  border-radius: 6px;
+}
+
+.box__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fb1;
+}
+
+.box__semi-title {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.box__text {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: var(--cinze);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.utilities {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.utilities__btn {
+  width: 220px;
+  padding: 0.8rem 0.5rem 0.8rem 2rem;
+  background: var(--blue-ligth) url("../images/cadeado.svg") no-repeat 25px;
+  background-size: 28px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.utilities__power {
+  margin-left: auto;
+}
+
+.utilities__title {
+  color: var(--cinze);
+}
+
+.utilities__indicator {
+  color: var(--red);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.utilities__circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+
+.utilities__circles > span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.utilities__painel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.utilities__painel_btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+.utilities__painel_value {
+  color: var(--yellow);
+  font-size: 2.5rem;
+  margin: 0 1rem;
+  user-select: none;
+}
+
+.box__separator {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.377);
+  margin-top: 2rem;
+}
+
+.box__passwords {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+}
+.box__password-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/shild.svg") no-repeat center;
+  background-size: 28px;
+  max-width: 220px;
+  height: 46.59px;
+  border-radius: 4px;
+  background-color: var(--blue-password);
+  margin: 0.8rem 0;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.box__password-item:nth-child(even) {
+  margin-left: 2rem;
+}
+
+.box__password-text {
+  color: var(--green-password);
+}
+
+.box__password-item-img {
+  display: none;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.box__password-item-img.active {
+  display: initial;
+}
+
+.box__pasword-copied {
+  display: none;
+  color: #fff;
+  font-size: 0.675rem;
+  background-color: var(--blue-semi-dark);
+  padding: 0.3rem;
+  border-radius: 4px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-weight: 600;
+}
+
+.box__pasword-copied.active {
+  display: initial;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+
+  .utilities {
+    flex-direction: column-reverse;
+  }
+
+  .utilities__power {
+    margin-left: initial;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .box__title {
+    font-size: 2rem;
+  }
+
+  .box__semi-title {
+    font-size: 1.5rem;
+  }
+
+  .box__text {
+    font-size: 0.975rem;
+  }
+
+  .box__passwords {
+    grid-template-columns: 1fr;
+  }
+
+  .box__password-item {
+    width: 220px;
+    justify-self: center;
+    padding: 0;
+  }
+
+  .box__password-item:nth-child(even) {
+    margin-left: initial;
+  }
+}

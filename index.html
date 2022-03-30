@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tranca Senhas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script async src="./js/script.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <h1 class="box__title">Tranca Senhas</h1>
+      <h2 class="box__semi-title">Gerador de senhas aleatórias.</h2>
+      <p class="box__text">
+        Nunca mais use senhas inseguras<br />
+        novamente.
+      </p>
+
+      <div class="utilities">
+        <button class="utilities__btn" data-js="button">Gerar Senha</button>
+        <div class="utilities__power">
+          <p class="utilities__title">Nivel de Segurança</p>
+          <p class="utilities__indicator" data-js="indicator"></p>
+          <div class="utilities__circles">
+            <span data-js="circles"></span>
+            <span data-js="circles"></span>
+            <span data-js="circles"></span>
+          </div>
+          <div class="utilities__painel">
+            <button class="utilities__painel_btn" data-js="downValue">-</button>
+            <p class="utilities__painel_value" data-js="value"></p>
+            <button class="utilities__painel_btn" data-js="upValue">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="box__separator"></div>
+
+      <div class="box__passwords">
+        <div class="box__password-item">
+          <img src="images/copy.svg" class="box__password-item-img" data-js="copy"/>
+          <p class="box__password-text" data-js="password"></p>
+          <p class="box__pasword-copied" data-js="copied">Copiado!</p>
+        </div>
+        <div class="box__password-item">
+          <img src="images/copy.svg" class="box__password-item-img" data-js="copy"/>
+          <p class="box__password-text" data-js="password"></p>
+          <p class="box__pasword-copied" data-js="copied">Copiado!</p>
+        </div>
+        <div class="box__password-item">
+          <img src="images/copy.svg" class="box__password-item-img" data-js="copy"/>
+          <p class="box__password-text" data-js="password"></p>
+          <p class="box__pasword-copied" data-js="copied">Copiado!</p>
+        </div>
+        <div class="box__password-item">
+          <img src="images/copy.svg" class="box__password-item-img" data-js="copy"/>
+          <p class="box__password-text" data-js="password"></p>
+          <p class="box__pasword-copied" data-js="copied">Copiado!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
