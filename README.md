@@ -1,4 +1,4 @@
-<a href="https://trancasenhas.netlify.app/">Tranca Senhas - Gerador de Senhas Aleatórias</a>
+<a href="https://trancasenhas.netlify.app/" target="_blank">Tranca Senhas - Gerador de Senhas Aleatórias</a>
 
 Desenvolvido com JS Vanilla.
 
